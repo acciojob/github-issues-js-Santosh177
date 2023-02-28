@@ -41,3 +41,4 @@ async function getGithubIssuesTitle(pageNum = 1) {
   const result = await response.json();
   return result.map((obj) => obj.title);
 }
+getGithubIssuesTitle().then((data) => renderLists(data));
